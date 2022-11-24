@@ -69,34 +69,34 @@ vi skyline_ops.json
 #### Example Output if no Endpoints are existing
 ```
 --------------------------------------------------------------------------------------------------------------
-[11-24-2022_09-38-04] Connect to vCenter vcsa.oz.xmsoft.de
-[11-24-2022_09-38-05] Get endpoints from vCenter vcsa.oz.xmsoft.de
-[11-24-2022_09-38-05] Get endpoints from Skyline Collector 192.168.19.47
+[11-24-2022_09-38-04] Connect to vCenter vcsa.vmware.local
+[11-24-2022_09-38-05] Get endpoints from vCenter vcsa.vmware.local
+[11-24-2022_09-38-05] Get endpoints from Skyline Collector skyline.vmware.local
 [11-24-2022_09-38-05] Compare Endpoints in Skyline Collector vs. found Endpoints
-[11-24-2022_09-38-05] vcsa.oz.xmsoft.de not found in Skyline Collector 192.168.19.47
-[11-24-2022_09-38-05] Add Endpoint vcsa.oz.xmsoft.de in Skyline Collector 192.168.19.47
+[11-24-2022_09-38-05] vcsa.vmware.local not found in Skyline Collector skyline.vmware.local
+[11-24-2022_09-38-05] Add Endpoint vcsa.vmware.local in Skyline Collector skyline.vmware.local
 [11-24-2022_09-38-10] Endpoint created
-[11-24-2022_09-38-10] vrops.oz.xmsoft.de not found in Skyline Collector 192.168.19.47
-[11-24-2022_09-38-10] Add Endpoint vrops.oz.xmsoft.de in Skyline Collector 192.168.19.47
+[11-24-2022_09-38-10] vrops.vmware.local not found in Skyline Collector skyline.vmware.local
+[11-24-2022_09-38-10] Add Endpoint vrops.vmware.local in Skyline Collector skyline.vmware.local
 [11-24-2022_09-38-14] Endpoint created
-[11-24-2022_09-38-14] Disconnect from vcsa.oz.xmsoft.de
+[11-24-2022_09-38-14] Disconnect from vcsa.vmware.local
 --------------------------------------------------------------------------------------------------------------
 ```
 
 #### Example Output if all Endpoints are working as expected
 ```
 --------------------------------------------------------------------------------------------------------------
-[11-24-2022_09-36-19] Connect to vCenter vcsa.oz.xmsoft.de
-[11-24-2022_09-36-20] Get endpoints from vCenter vcsa.oz.xmsoft.de
-[11-24-2022_09-36-21] Get endpoints from Skyline Collector 192.168.19.47
+[11-24-2022_09-36-19] Connect to vCenter vcsa.vmware.local
+[11-24-2022_09-36-20] Get endpoints from vCenter vcsa.vmware.local
+[11-24-2022_09-36-21] Get endpoints from Skyline Collector skyline.vmware.local
 [11-24-2022_09-36-21] Compare Endpoints in Skyline Collector vs. found Endpoints
-[11-24-2022_09-36-21] Found vcsa.oz.xmsoft.de in Skyline Collector 192.168.19.47
-[11-24-2022_09-36-21] Check status of vcsa.oz.xmsoft.de in Skyline Collector 192.168.19.47
-[11-24-2022_09-36-21] Endpoint status of vcsa.oz.xmsoft.de is OK
-[11-24-2022_09-36-21] Found vrops.oz.xmsoft.de in Skyline Collector 192.168.19.47
-[11-24-2022_09-36-21] Check status of vrops.oz.xmsoft.de in Skyline Collector 192.168.19.47
-[11-24-2022_09-36-21] Endpoint status of vrops.oz.xmsoft.de is OK
-[11-24-2022_09-36-21] Disconnect from vcsa.oz.xmsoft.de
+[11-24-2022_09-36-21] Found vcsa.vmware.local in Skyline Collector skyline.vmware.local
+[11-24-2022_09-36-21] Check status of vcsa.vmware.local in Skyline Collector skyline.vmware.local
+[11-24-2022_09-36-21] Endpoint status of vcsa.vmware.local is OK
+[11-24-2022_09-36-21] Found vrops.vmware.local in Skyline Collector skyline.vmware.local
+[11-24-2022_09-36-21] Check status of vrops.vmware.local in Skyline Collector skyline.vmware.local
+[11-24-2022_09-36-21] Endpoint status of vrops.vmware.local is OK
+[11-24-2022_09-36-21] Disconnect from vcsa.vmware.local
 --------------------------------------------------------------------------------------------------------------
 ```
 
