@@ -1,0 +1,18 @@
+{
+    "SkylineCLI": "/PATH/TO/skylinecli-darwin-arm64-1.0.5",
+    "vcsa":  "VCENTER-FQDN",
+    "SkylineVCUser": "skywatcher@vsphere.local",
+    "SkylineVCUserPass": "VMware123!",
+    "Collector": "COLLECTOR-FQDN",
+    "CollectorUser": "admin",
+    "CollectorUserPass": "VMware123!",
+    "vROPsUser": "skywatcher",
+    "vROPsUserPassword": "VMware123!",
+    "NSXTUser": "skywatcher",
+    "NSXTPassword": "VMware123!",
+    "vCenterFilter": "vc",
+    "vROPsFilter": "vrops",
+    "NSXTFilter": "nsx",
+    "LCMFilter": "lcm"
+}
+
