@@ -90,7 +90,7 @@ Function Execute-SkylineCLI {
                         $eppassword = $VarLCMPassword
                     }
                 }
-            
+                
                 $Command = "$VarSkylineCLI --action=$action --username $VarCollectorUser --password $VarCollectorPassword --collector $VarCollector --insecure=true --eptype=$eptype --epuser=$epuser --eppassword=$eppassword --ep=$p"
                 #Write-Host $command
                 $result = (& Invoke-Expression $Command | Out-String)
@@ -115,15 +115,18 @@ $VarFoundEndpoints = @($VarvCenter)
 
 My-Logger -color "Green" -message "Get endpoints from vCenter $VarvCenter"
 
-$vROPsVM = Get-VM -Name "$VarvROPsFilter*" | Select-Object -ExpandProperty Name 
+$vROPsVM = Get-VM -Name "$VarvROPsFilter*"  | Where-object {$_.powerstate -eq "poweredon"} | Select-Object -ExpandProperty Name 
 if ($vROPsVM) {
     $VarFoundEndpoints += $vROPsVM
 }
-$NSXTVM = Get-VM -Name "$VarNSXTFilter*" | Select-Object -ExpandProperty Name 
+$NSXTVM = Get-VM -Name "$VarNSXTFilter*" | Where-object {$_.powerstate -eq "poweredon"} | Select-Object -ExpandProperty Name 
 if ($NSXTVM) {
-    $VarFoundEndpoints += $NSXTVM
+    $nsx = $NSXTVM[0]
+    $nsxfirst,$domain = $nsx -split '\.',2
+    $nsxtvip = $VarNSXTFilter + "." + $domain
+    $VarFoundEndpoints += $nsxtvip
 }
-$LCMVM = Get-VM -Name "$VarLCMFilter*" | Select-Object -ExpandProperty Name 
+$LCMVM = Get-VM -Name "$VarLCMFilter*"  | Where-object {$_.powerstate -eq "poweredon"} | Select-Object -ExpandProperty Name 
 if ($LCMVM) {
     $VarFoundEndpoints += $LCMVM
 }
